@@ -1,0 +1,21 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    tty-cursor (0.7.1)
+    tty-spinner (0.9.3)
+      tty-cursor (~> 0.7)
+    yaml (0.4.0)
+
+PLATFORMS
+  ruby
+  x86_64-linux
+
+DEPENDENCIES
+  tty-spinner
+  yaml
+
+RUBY VERSION
+   ruby 3.3.6p108
+
+BUNDLED WITH
+   2.5.22

@@ -1,0 +1,134 @@
+file_operations:
+  create_file:
+    command: 'touch'
+    description: 'Cria um arquivo vazio.'
+    arguments:
+      - name: 'filename'
+        required: true
+        description: 'O nome do arquivo a ser criado.'
+  delete_file:
+    command: 'rm'
+    description: 'Deleta um arquivo.'
+    arguments:
+      - name: 'filename'
+        required: true
+        description: 'O nome do arquivo a ser deletado.'
+      - name: 'force'
+        flag: '-f'
+        required: false
+        description: 'Força a deleção (use com cautela).'
+  list_files:
+    command: 'ls'
+    description: 'Lista arquivos'
+    arguments:
+      - name: 'directory'
+        required: false
+        description: 'Lista o conteúdo do diretório especificado'
+      - name: 'all'
+        flag: '-a'
+        required: false
+        description: 'Não ignora entradas começando com .'
+      - name: 'almost-all'
+        flag: '-A'
+        required: false
+        description: 'Não lista as entradas implícitas . e ..'
+      - name: 'escape'
+        flag: '-b'
+        required: false
+        description: 'Emite escapes no estilo C para caracteres não-gráficos'
+  walk_in:
+    command: 'cd'
+    description: 'Caminha pelos diretórios do sistema'
+    arguments:
+      - name: 'path'
+        required: false
+        description: 'Caminha até o diretório selecionado'
+  meow_files:
+    command: 'cat'
+    description: 'Ve o conteudo do arquivo especificado'
+    arguments:
+      - name: 'file'
+        required: true
+        description: 'Arquivo que sera visualizado e printado pelo comando'
+text_editor:
+  vim:
+    command: 'vim'
+    description: 'Abre o editor de texto Vim'
+    arguments:
+      - name: 'file'
+        required: false
+        description: 'Abre o arquivo especificado com o Vim'
+network_commands:
+  ping:
+    command: 'ping'
+    description: 'Envia requisições de eco ICMP para hosts de rede.'
+    arguments:
+      - name: 'host'
+        required: true
+        description: 'O hostname ou endereço IP para pingar.'
+      - name: 'count'
+        flag: '-c'
+        required: false
+        description: 'Número de requisições de eco a serem enviadas.'
+  traceroute:
+    command: 'traceroute'
+    description: 'Exibe a rota dos pacotes até um destino.'
+    arguments:
+      - name: 'destination'
+        required: true
+        description: 'O destino a ser rastreado.'
+      - name: 'hops'
+        flag: '-m'
+        required: false
+        description: 'Número máximo de saltos.'
+  netstat:
+    command: 'netstat'
+    description: 'Exibe conexões de rede, tabelas de roteamento e estatísticas.'
+    arguments:
+      - name: 'listening'
+        flag: '-l'
+        required: false
+        description: 'Mostra apenas portas de escuta.'
+      - name: 'tcp'
+        flag: '-t'
+        required: false
+        description: 'Filtra apenas conexões TCP.'
+terminal:
+  clear:
+    command: 'clear'
+    description: 'Limpa a tela do terminal'
+    arguments:
+      - name: 'nothin'
+        required: false
+process_management:
+  list_processes:
+    command: 'ps'
+    description: 'Lista processos em execução.'
+    arguments:
+      - name: 'all_users'
+        flag: '-e'
+        required: false
+        description: 'Mostra processos de todos os usuários.'
+      - name: 'detailed'
+        flag: '-f'
+        required: false
+        description: 'Mostra detalhes adicionais dos processos.'
+  kill_process:
+    command: 'kill'
+    description: 'Encerra um processo pelo seu ID (PID).'
+    arguments:
+      - name: 'pid'
+        required: true
+        description: 'O ID do processo a ser encerrado.'
+      - name: 'signal'
+        flag: '-s'
+        required: false
+        description: 'O sinal a ser enviado (exemplo: SIGKILL).'
+  top:
+    command: 'top'
+    description: 'Exibe os processos em execução em tempo real.'
+    arguments:
+      - name: 'delay'
+        flag: '-d'
+        required: false
+        description: 'Define o tempo de atualização da tela.'
