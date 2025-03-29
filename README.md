@@ -33,24 +33,24 @@ Leporidae 0.1 is certainly not an operating system; however, its endoskeleton an
         └── config.yaml
 ```
 
-O diretório raiz ``/lpr`` contém duas pastas principais:
+The root directory ``/lpr`` contains two main folders:
 
-``@run:`` Diretório destinado ao armazenamento de arquivos de aplicações baixadas no ambiente Leporidae, incluindo arquivos de configuração e dados de runtime necessários para a execução das aplicações.
+``@run:`` Directory intended for storing application files downloaded in the Leporidae environment, including configuration files and runtime data necessary for application execution.
 
-``@usr:`` Organiza subdiretórios essenciais para o funcionamento do sistema, incluindo binários executáveis (bin), componentes do kernel (krn), e arquivos de configuração (yml).
+``@usr:`` Organizes essential subdirectories for system operation, including executable binaries (bin), kernel components (krn), and configuration files (yml).
 
-No diretório ``@usr/krn/lprk-0.1-ALV``, estão presentes os seguintes arquivos:
+In the ``@usr/krn/lprk-0.1-ALV`` directory, the following files are present:
 
- - **main.rb:** Arquivo principal responsável por orquestrar a execução das funções centrais do sistema, coordenando a inicialização e chamadas subsequentes.
+ - **main.rb:** Main file responsible for orchestrating the execution of the system's core functions, coordinating initialization and subsequent calls.
 
- - **recall.rb:** Módulo de interação direta com o kernel, responsável por realizar chamadas de sistema (syscalls) e operações de baixo nível.
+ - **recall.rb:** Direct interaction module with the kernel, responsible for performing system calls (syscalls) and low-level operations.
 
- - **cmd.rb:** Define e gerencia as chamadas de sistema que serão encaminhadas para o recall.rb, funcionando como uma camada de abstração para syscalls.
+ - **cmd.rb:** Defines and manages the system calls that will be forwarded to recall.rb, functioning as an abstraction layer for syscalls.
 
- - **boot.rb:** Script de inicialização do sistema, responsável por configurar o ambiente, carregar dependências e invocar os componentes essenciais na ordem correta.
+ - **boot.rb:** System initialization script, responsible for setting up the environment, loading dependencies, and invoking essential components in the correct order.
 
- - **Gemfile e Gemfile.lock:** Arquivos de gerenciamento de dependências Ruby, especificando e bloqueando versões de bibliotecas necessárias ao sistema.
+ - **Gemfile and Gemfile.lock:** Ruby dependency management files, specifying and locking the versions of libraries required by the system.
 
-No diretório ``@usr/yml``, o arquivo **config.yaml** armazena a configuração das syscalls e parâmetros do sistema, sendo referenciado dinamicamente pelos arquivos recall.rb e cmd.rb durante a execução.
+In the ``@usr/yml`` directory, the **config.yaml** file stores the configuration of syscalls and system parameters, being dynamically referenced by the recall.rb and cmd.rb files during execution.
 
 ---
