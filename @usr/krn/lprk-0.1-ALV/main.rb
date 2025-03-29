@@ -19,6 +19,27 @@ def error_beep
   Process.kill("TERM", beep_error_pid)
 end
 
+def exit_beep
+  beep1_pid = spawn("speaker-test -t sine -f 1000 > /dev/null 2>&1")
+  sleep 0.12
+  Process.kill("TERM", beep1_pid)
+  beep2_pid = spawn("speaker-test -t sine -f 1100 > /dev/null 2>&1")
+  sleep 0.12
+  Process.kill("TERM", beep2_pid)
+  beep3_pid = spawn("speaker-test -t sine -f 1200 > /dev/null 2>&1")
+  sleep 0.12
+  Process.kill("TERM", beep3_pid)
+  beep4_pid = spawn("speaker-test -t sine -f 1300 > /dev/null 2>&1")
+  sleep 0.12
+  Process.kill("TERM", beep4_pid)
+  beep5_pid = spawn("speaker-test -t sine -f 1500 > /dev/null 2>&1")
+  sleep 0.23
+  Process.kill("TERM", beep5_pid)
+  beep6_pid = spawn("speaker-test -t sine -f 1400 > /dev/null 2>&1")
+  sleep 0.23
+  Process.kill("TERM", beep6_pid)
+end
+
 user_catch = Etc.getpwuid(Process.uid)
 user = user_catch.name
 config = '/lpr/@usr/yml/config.yaml'
@@ -45,7 +66,7 @@ if $PROGRAM_NAME == __FILE__
     print "#{$red} /^ #{$reset}# #{user}@#{hostname} # #{dir} $ "
     command = gets.chomp
 
-    break if command == 'exit' && system("clear")
+    break if command == 'exit' && exit_beep && system("clear")
 
     parts = command.split(' ', 2)
     $command_key = parts[0]
