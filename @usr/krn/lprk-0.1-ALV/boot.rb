@@ -140,4 +140,5 @@ beepc_pid = spawn("speaker-test -t sine -f 2000 -l 1 -p 100 > /dev/null 2>&1")
 sleep 0.26
 Process.kill("TERM", beepc_pid)
 
+Dir.chdir("/lpr/")
 exec "ruby '#{main_script_path}'"
