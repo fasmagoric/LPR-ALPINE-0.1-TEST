@@ -7,7 +7,9 @@ Leporidae 0.1 is certainly not an operating system; however, its endoskeleton an
   Leporidae aims to be a compact and functional endosystem capable of running on external HDDs, SSDs, and similar devices, managing files and functionalities within these devices regardless of the host machine’s operating system. It encapsulates all processes within a secure and efficient virtualization environment, making it ideal for office environments or servers.
 
 ## REQUIREMENTS
-- Ruby 3.3.6, Gem 3.6.6, Bundler 2.6.6
+- Ruby 3.3.6
+- Gem 3.6.6
+- Bundler 2.6.6
 - Alpine Linux 3.21.3 - VIRTUAL
 
 ---
