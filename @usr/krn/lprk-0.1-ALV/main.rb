@@ -10,6 +10,7 @@ require_relative 'cmd'
 # colors
 $red = "\033[31m"
 $green = "\033[32m"
+$yellow = "\033[33m"
 $cyan = "\033[36m"
 $reset = "\033[0m"
 
@@ -59,11 +60,11 @@ system "clear"
 
 if $PROGRAM_NAME == __FILE__
   loop do
-    dir = Dir.pwd
+    $dir = Dir.pwd
 
     hostname = `hostname`.chomp
 
-    print "#{$red} /^ #{$reset}# #{user}@#{hostname} # #{dir} $ "
+    print "#{$red} /^ #{$reset}# #{user}@#{hostname} # #{$dir} $ "
     command = gets.chomp
 
     break if command == 'exit' && exit_beep && system("clear")
@@ -82,6 +83,7 @@ if $PROGRAM_NAME == __FILE__
       when 'cd', 'd' then CMD.cd
       when 'cat', 'meow' then CMD.cat
       when 'ping' then CMD.ping
+      when 'rm' then CMD.rm
       else 
         error_beep
         puts "#{$red}[!] - ERRO: Comando '#{$command_key}' nao reconhecido.#{$reset}"

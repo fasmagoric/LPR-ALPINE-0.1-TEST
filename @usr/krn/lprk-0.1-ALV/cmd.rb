@@ -5,10 +5,17 @@
 require_relative 'recall'
 
 class CMD 
+  def self.rm
+    if $command_key == 'rm'
+      KFN.recall('file_operations', 'delete_file', { filename: $command_arg } )
+      puts "#{$yellow}#{$dir}/#{$command_arg.split(/ /, 2).drop(1) * ''} [file deleted]-X#{$reset}"
+      return
+    end
+  end
   def self.touch
     if $command_key == 'touch'
       KFN.recall('file_operations', 'create_file', { filename: $command_arg } )
-      puts "#{$green}#{$command_arg} [new file]-> #{$relative_dir}/#{$command_arg}#{$reset}"
+      puts "#{$green}#{$command_arg} [new file]-> #{$dir}/#{$command_arg}#{$reset}"
       return
     end
   end
