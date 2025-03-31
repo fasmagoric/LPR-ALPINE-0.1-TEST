@@ -11,7 +11,7 @@ Leporidae 0.1 is certainly not an operating system; however, its endoskeleton an
 - Gem 3.6.6
 - Bundler 2.6.6
 - Alpine Linux 3.21.3 - VIRTUAL
-- Advanced Linux Sound Architecture Driver (ALSA) k6-12.20-0-virt ( and alsa-utils)
+- Advanced Linux Sound Architecture Driver (ALSA) k6-12.20-0-virt (and alsa-utils)
 ---
 
 # SYSTEM DIRECTORY DIAGRAM
