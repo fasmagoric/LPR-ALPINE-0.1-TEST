@@ -1,5 +1,5 @@
 # LEPORIDAE 0.1 - ALV (ALPINE LINUX VIRTUALIZATION) - TEST VERSION (unstable)
-[![Licence](https://img.shields.io/github/license/Ileriayo/markdown-badges?style=for-the-badge)](./LICENSE) ![Ruby](https://img.shields.io/badge/ruby-%23CC342D.svg?style=for-the-badge&logo=ruby&logoColor=white) <br>
+[![Licence](https://img.shields.io/github/license/Ileriayo/markdown-badges?style=for-the-badge)](./LICENSE) ![Alpine Linux](https://img.shields.io/badge/Alpine_Linux-%230D597F.svg?style=for-the-badge&logo=alpine-linux&logoColor=white) ![Ruby](https://img.shields.io/badge/ruby-%23CC342D.svg?style=for-the-badge&logo=ruby&logoColor=white) <br>
 
 
 Leporidae 0.1 is certainly not an operating system; however, its endoskeleton and structure function as a resident system, an endosystem, that communicates directly with the kernel and the software’s lowest layers. Its primary distinction lies in its entire operational module being written in Ruby.
