@@ -8,13 +8,16 @@ Leporidae 0.1 is certainly not an operating system; however, its endoskeleton an
 
   Leporidae aims to be a compact and functional endosystem capable of running on external HDDs, SSDs, and similar devices, managing files and functionalities within these devices regardless of the host machine’s operating system. It encapsulates all processes within a secure and efficient virtualization environment, making it ideal for office environments or servers.
 
+<br>
+
 ## REQUIREMENTS
 - Ruby 3.3.6
 - Gem 3.6.6
 - Bundler 2.6.6
 - Alpine Linux 3.21.3 - VIRTUAL
 - Advanced Linux Sound Architecture Driver (ALSA) k6-12.20-0-virt (and alsa-utils)
----
+
+<br>
 
 # SYSTEM DIRECTORY DIAGRAM
 
@@ -54,5 +57,3 @@ In the ``@usr/krn/lprk-0.1-ALV`` directory, the following files are present:
  - **Gemfile and Gemfile.lock:** Ruby dependency management files, specifying and locking the versions of libraries required by the system.
 
 In the ``@usr/yml`` directory, the **config.yaml** file stores the configuration of syscalls and system parameters, being dynamically referenced by the recall.rb and cmd.rb files during execution.
-
----
